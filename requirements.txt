@@ -1,9 +1,0 @@
-Flask
-gunicorn
-pandas
-numpy
-scikit-learn
-matplotlib
-wordcloud
-requests
-Pillow

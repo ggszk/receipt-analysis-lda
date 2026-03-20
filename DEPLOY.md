@@ -14,11 +14,7 @@
 ## ローカル開発
 
 ```bash
-# 仮想環境のセットアップ（初回のみ）
-python -m venv .venv
-pip install -r requirements.txt
-
-# 開発サーバー起動
+# 開発サーバー起動（uv が .venv を自動作成）
 make dev
 # → http://localhost:8080 でアクセス
 ```

@@ -23,4 +23,4 @@ open:
 	open $(URL)
 
 dev:
-	.venv/bin/python app.py
+	uv run python app.py
