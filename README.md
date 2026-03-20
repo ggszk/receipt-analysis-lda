@@ -9,10 +9,12 @@
 - テーマ数を変更して異なる角度から分析
 - 分析結果をわかりやすく解説
 
-## 📋 必要なライブラリ
+## 📋 セットアップ
+
+[uv](https://docs.astral.sh/uv/) を使用して依存関係を管理しています。
 
 ```bash
-pip install flask pandas scikit-learn numpy
+uv sync
 ```
 
 ## 🚀 使用方法
@@ -20,7 +22,7 @@ pip install flask pandas scikit-learn numpy
 ### 1. Webアプリを起動
 
 ```bash
-python app.py
+make dev
 ```
 
 ### 2. ブラウザでアクセス
@@ -36,7 +38,13 @@ http://localhost:8080 にアクセス
 ### 4. コマンドライン分析（オプション）
 
 ```bash
-python analysis.py
+uv run python analysis.py
+```
+
+### 5. Cloud Runへのデプロイ
+
+```bash
+make deploy
 ```
 
 ## 📊 分析結果の見方
@@ -59,6 +67,9 @@ python analysis.py
 ```
 ├── analysis.py              # LDA分析メイン処理
 ├── app.py                   # Webアプリケーション
+├── pyproject.toml           # プロジェクト設定・依存関係（uv）
+├── Makefile                 # dev/deploy等のコマンド
+├── Dockerfile               # Cloud Run用コンテナ定義
 ├── レシートデータ_doc.csv    # 分析対象データ
 ├── templates/
 │   └── index.html           # Webページ
@@ -104,6 +115,6 @@ analyze_receipt_data(5)  # 5テーマで分析
 
 ### デバッグモード
 開発者向けに詳細なエラー情報を表示：
-```python
-app.run(debug=True)
+```bash
+make dev
 ```
