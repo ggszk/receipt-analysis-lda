@@ -1,6 +1,6 @@
 PROJECT=ggszk-lab
 REGION=asia-northeast1
-SERVICE=lda-demo
+SERVICE=receipt-analysis-lda
 URL=https://$(SERVICE)-655957689949.$(REGION).run.app
 
 deploy:

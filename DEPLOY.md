@@ -6,8 +6,8 @@
 |------|-----|
 | GCPプロジェクトID | `ggszk-lab` |
 | リージョン | `asia-northeast1`（東京） |
-| サービス名 | `lda-demo` |
-| サービスURL | https://lda-demo-655957689949.asia-northeast1.run.app |
+| サービス名 | `receipt-analysis-lda` |
+| サービスURL | https://receipt-analysis-lda-655957689949.asia-northeast1.run.app |
 
 ---
 
